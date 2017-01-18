@@ -420,6 +420,9 @@ public class system_start {
         Scanner scan = new Scanner(System.in);
         System.out.println("enter word to search or 0 to exit::");
         String word = scan.next();
+	word=word.toLowerCase();
+	//System.out.print("entered word is:: ");
+	//System.out.println(word);
         while(word.charAt(0)!='0'){
         	double TrieStart = System.nanoTime();
         	res=t.TrieSearch(word);
@@ -469,6 +472,7 @@ public class system_start {
         	}
         	System.out.println("\n\nenter word to search or 0 to exit::");
         	word = scan.next();
+		word=word.toLowerCase();
         }
         System.out.println("\nTime taken for building up whole dictionary");
         System.out.println("Trie    : "+TrieInsertTotal+" ms");
